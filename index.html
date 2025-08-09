@@ -13,6 +13,15 @@
     <title>MG Custom Works</title>
 
     <style>
+      /* Custom CSS for premium gold emphasis */
+      :root {
+        --bs-primary: #DAA520; /* Goldenrod - main gold color for Bootstrap primary elements */
+        --bs-primary-rgb: 218, 165, 32; /* RGB equivalent for primary gold */
+        --gold-dark: #B8860B; /* Darker gold for hover states */
+        --gold-light: #FFD700; /* Lighter gold for accents */
+        --dark-text: #212529; /* Dark text for contrast on gold backgrounds */
+      }
+
       .hero-section {
         /* Updated background image for the hero section */
         background: url('https://finishedbymg.com/finishedbymg_banner.jpg') no-repeat center center;
@@ -40,6 +49,8 @@
       }
       .section-heading {
         margin-bottom: 3rem;
+        color: var(--gold-light); /* Gold color for section headings */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle shadow for premium look */
       }
       .card-service {
         height: 100%; /* Ensure cards in service section have equal height */
@@ -47,12 +58,35 @@
       .icon-service {
         font-size: 2rem; /* Size for Bootstrap Icons */
         margin-bottom: 0.5rem;
-        color: #007bff; /* Bootstrap primary color for icons */
+        color: var(--gold-light); /* Gold color for service icons */
       }
       /* Ensure carousel images have a consistent height and cover their container */
       .carousel-item img {
         height: 600px; /* Fixed height for all carousel images */
         object-fit: cover; /* Cover the area without distortion */
+      }
+
+      /* Premium gold styling for buttons */
+      .btn-primary {
+        background-color: var(--bs-primary);
+        border-color: var(--bs-primary);
+        color: var(--dark-text); /* Dark text on gold button */
+        font-weight: bold;
+        transition: all 0.3s ease; /* Smooth transition for hover effects */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+      }
+
+      .btn-primary:hover {
+        background-color: var(--gold-dark);
+        border-color: var(--gold-dark);
+        color: var(--dark-text);
+        transform: translateY(-2px); /* Slight lift on hover */
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Optional: Add a subtle border or text emphasis for the overall page */
+      body {
+        /* You can add subtle background patterns or textures here if desired for overall page emphasis */
       }
     </style>
   </head>
